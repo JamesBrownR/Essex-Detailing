@@ -322,7 +322,7 @@
         }
 
         .submit-btn {
-            padding: 15px;
+            padding: 30px;
             background-color: var(--accent-silver);
             color: var(--primary-dark);
             border: 2px solid var(--accent-silver);
@@ -332,6 +332,47 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
+        .gallery {
+  background: var(--white); /* Or var(--light-bg) */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item .gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: var(--white);
+  padding: 30px 20px 15px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
 
         .submit-btn:hover {
             background-color: transparent;
@@ -441,6 +482,40 @@
         <div class="scroll-indicator">↓</div>
     </section>
 
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2 class="section-title">Our Work</h2>
+        <p class="section-subtitle">See the transformations we've created</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="Essex-Detailing1.png" alt="Beautifully painted living room">
+            <div class="gallery-label"></div>
+          </div>
+          <div class="gallery-item">
+            <img src="Essex-Detailing2.png" alt="Freshly painted home exterior">
+            <div class="gallery-label"></div>
+          </div>
+          <div class="gallery-item">
+            <img src="Essex-Detailing3.png" alt="Modern office paint job">
+            <div class="gallery-label"></div>
+          </div>
+             <div class="gallery-item">
+            <img src="Essex-Detailing4.png" alt="Modern office paint job">
+            <div class="gallery-label"></div>
+          </div>
+             <div class="gallery-item">
+            <img src="Essex-Detailing5.png" alt="Modern office paint job">
+            <div class="gallery-label"></div>
+          </div>
+             <div class="gallery-item">
+            <img src="Essex-Detailing6.png" alt="Modern office paint job">
+            <div class="gallery-label"></div>
+          </div>
+          </div>
+
+      </div>
+    </section>
     <!-- Services Section -->
     <section id="services">
         <div class="container">
@@ -568,7 +643,6 @@
         <div class="container">
             <div class="footer-links">
                 <a href="https://www.google.com/maps/place/Essex+Detailing/@35.6627268,-97.9823538,12z/data=!4m14!1m7!3m6!1s0x28d2f98ccd7b2483:0xf29341169762dcc1!2sEssex+Detailing!8m2!3d35.3090496!4d-98.7167134!16s%2Fg%2F11x_9hdwwd!3m5!1s0x28d2f98ccd7b2483:0xf29341169762dcc1!8m2!3d35.3090496!4d-98.7167134!16s%2Fg%2F11x_9hdwwd?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">Google Maps</a>
-                <a href="https://github.com/JamesBrownR/Essex-Detailing" target="_blank">GitHub</a>
                 <a href="tel:+15805149702">Call Us</a>
             </div>
             <p>&copy; 2025 Essex Detailing. All rights reserved. | OKC City and Surrounding Areas</p>
@@ -578,19 +652,47 @@
     <script>
         // Reviews Array - Easy to add more reviews here
         const reviews = [
-            { name: "Customer 1", rating: 5, body: "" },
-            { name: "Customer 2", rating: 5, body: "" },
-            { name: "Customer 3", rating: 5, body: "" },
-            { name: "Customer 4", rating: 5, body: "" },
-            { name: "Customer 5", rating: 5, body: "" },
-            { name: "Customer 6", rating: 5, body: "" },
-            { name: "Customer 7", rating: 5, body: "" },
-            { name: "Customer 8", rating: 5, body: "" },
-            { name: "Customer 9", rating: 5, body: "" },
-            { name: "Customer 10", rating: 5, body: "" },
-            { name: "Customer 11", rating: 5, body: "" },
-            { name: "Customer 12", rating: 5, body: "" }
-        ];
+    {
+        "name": "Stacey Burnett",
+        "rating": 5,
+        "body": "Ian, did a great job on my car. He came to my house very professional and respectful young man, Took his time. Detailed my seats had them looking brand new, did a great job on my interior even had the new car smell when he was finished. I would recommend this young man to anyone who's looking for superior car service. And his prices are very reasonable. I will definitely spread the word. Happy customer."
+    },
+    {
+        "name": "Annette LaCaze",
+        "rating": 5,
+        "body": "Showed up on time and the detail on my car was surprising. I havent seen it that clean since I first bought my car. Friendly and courteous. Definitely will use the service again."
+    },
+    {
+        "name": "Steve Essex",
+        "rating": 5,
+        "body": "Ian was very professional and came to my work so very convenient and the detail job was top notch!! Definitely will use this company again!!"
+    },
+    {
+        "name": "Tammie mcGruder",
+        "rating": 5,
+        "body": "They did a great job! Was very happy with the outcome of my car!🚓 …"
+    },
+    {
+        "name": "Deborah Taylor",
+        "rating": 5,
+        "body": "Great job and really took time cleaning the inside"
+    },
+    {
+        "name": "Donisha Sampson",
+        "rating": 5,
+        "body": "Excellent Service!!"
+    },
+    {
+        "name": "Amere Isom",
+        "rating": 5,
+        "body": "Highly Recommend, I just did an interior detail, seats, carpet, dashboard, doors, windows, everything is looking professionally beautiful."
+    },
+    {
+        "name": "JB Bb",
+        "rating": 5,
+        "body": ""
+    }
+];
 
         let displayedReviews = 6;
 
